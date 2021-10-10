@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua média é</title>
     <style>
-        #aprovado {
+        .aprovado {
             color: blue;
         }
-        #reprovado {
+        .reprovado {
             color: red;
         }
     </style>
@@ -40,9 +40,9 @@
             res.innerHTML += `<p>Sua média é igual a <strong>${media}</strong>`;
             
             if (media >= 7) {
-                res.innerHTML += '<p>Parabéns! Você foi <strong id='aprovado'>APROVADO</strong>';
+                res.innerHTML += '<p>Parabéns! Você foi <strong class="aprovado">APROVADO</strong>';
             } else {
-                res.innerHTML += '<p>Que pena! Você foi <strong id='reprovado'>REPROVADO</strong>';
+                res.innerHTML += '<p>Que pena! Você foi <strong class="reprovado">REPROVADO</strong>';
             }
         }
     </script>
