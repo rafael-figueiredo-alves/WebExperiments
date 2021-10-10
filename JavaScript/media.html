@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua média é</title>
+    <style>
+        #aprovado {
+            color: blue;
+        }
+        #reprovado {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descubra sua média</h1>
+    <p>Digite o valor das suas 4 notas e descubra sua média</p>
+    <input type="number" name="txtnota1" id="txtnota1">
+    <input type="number" name="txtnota2" id="txtnota2">
+    <input type="number" name="txtnota3" id="txtnota3">
+    <input type="number" name="txtnota4" id="txtnota4">
+    <input type="button" value="Calcular média" onclick="CalcularMedia()">
+    <div id="Resultado"></div>
+    <script>
+        function CalcularMedia() {
+            let txtnota1 = window.document.querySelector('input#txtnota1');
+            let txtnota2 = window.document.querySelector('input#txtnota2');
+            let txtnota3 = window.document.querySelector('input#txtnota3');
+            let txtnota4 = window.document.querySelector('input#txtnota4');
+            let res = document.querySelector('div#Resultado');
+            let nota1 = Number(txtnota1.value);
+            let nota2 = Number(txtnota2.value);
+            let nota3 = Number(txtnota3.value);
+            let nota4 = Number(txtnota4.value);
+            let media = (nota1 + nota2 + nota3 + nota4)/4;
+
+            res.innerHTML = '';
+            res.innerHTML += `<p>Sua média é igual a <strong>${media}</strong>`;
+            
+            if (media >= 7) {
+                res.innerHTML += '<p>Parabéns! Você foi <strong id='aprovado'>APROVADO</strong>';
+            } else {
+                res.innerHTML += '<p>Que pena! Você foi <strong id='reprovado'>REPROVADO</strong>';
+            }
+        }
+    </script>
+</body>
+</html>
