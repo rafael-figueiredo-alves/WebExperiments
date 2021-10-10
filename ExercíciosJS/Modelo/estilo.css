@@ -5,6 +5,8 @@ body {
 header {
     color: white;
     text-align: center;
+    font: normal 25pt Arial;
+    text-shadow: 3px 3px rgba(0, 0, 0, 0.192);
 }
 
 section {
@@ -19,4 +21,5 @@ section {
 footer {
     color: white;
     text-align: center;
+    font: normal 14pt Arial;
 }
