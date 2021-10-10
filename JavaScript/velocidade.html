@@ -16,7 +16,7 @@
     <p>Verifique sua velocidade. Informe-a abaixo:</p>    
     <input type="number" name="Vel" id="Vel">
     <input type="button" value="Checar" onclick="ChecarVelocidade()">
-    <input type="reset" value="Limpar">
+    <input type="reset" value="Limpar" onclick="Limpar()">
     <div class="situacao"></div>
     <script>
         function ChecarVelocidade() {
@@ -25,11 +25,18 @@
 
             res.innerHTML = '';
 
-            res.innerHTML += `Sua velocidade é <strong>${Vel} km/h </strong>`;
+            res.innerHTML += `<p>Sua velocidade é <strong>${Vel} km/h </strong></p>`;
 
             if (Vel > 60) {
                 res.innerHTML += '<p>Você foi <strong class="aviso">multado</strong> por excesso de velocidade!</p>'
             }
+
+            document.querySelector('input#Vel').focus();
+        }
+        function Limpar() {
+            document.querySelector('input#Vel').value = '';
+            document.querySelector('div.situacao').innerHTML = ''
+            document.querySelector('input#Vel').focus();
         }
     </script>
 </body>
