@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velocidade | Detran</title>
+    <style>
+        .aviso {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Saiba sobre sua velocidade</h1>
+    <p>Verifique sua velocidade. Informe-a abaixo:</p>    
+    <input type="number" name="Vel" id="Vel">
+    <input type="button" value="Checar" onclick="ChecarVelocidade()">
+    <input type="reset" value="Limpar">
+    <div class="situacao"></div>
+    <script>
+        function ChecarVelocidade() {
+            let Vel = Number(document.querySelector('input#Vel').value);
+            let res = document.querySelector('div.situacao');
+
+            res.innerHTML = '';
+
+            res.innerHTML += `Sua velocidade é <strong>${Vel} km/h </strong>`;
+
+            if (Vel > 60) {
+                res.innerHTML += '<p>Você foi <strong class="aviso">multado</strong> por excesso de velocidade!</p>'
+            }
+        }
+    </script>
+</body>
+</html>
