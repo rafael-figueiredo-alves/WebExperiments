@@ -23,3 +23,8 @@ footer {
     text-align: center;
     font: normal 14pt Arial;
 }
+
+input {
+    border: none;
+    border-width: 0pt;
+}
