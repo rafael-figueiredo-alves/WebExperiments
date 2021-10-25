@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Virtual | versão 0.1</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada Virtual | versão 0.1</h1>
+    </header>    
+    <section>
+        <div>
+          <p class="texto">Qual tabuada deseja exibir? <select name="tabuada" id="tabuada" class="selecao">
+                                            <option value="2">2 X</option>   
+                                            <option value="3">3 X</option>
+                                            <option value="4">4 X</option>
+                                            <option value="5">5 X</option>
+                                            <option value="6">6 X</option>
+                                            <option value="7">7 X</option>
+                                            <option value="8">8 X</option>
+                                            <option value="9">9 X</option>
+                                            <option value="10">10 X</option>
+                                         </select></p> 
+          <p class="texto">Clique no botão para saber o resultado. <button onclick="calcular()">Exibir</button></p>   
+        </div>
+        <div class="resultado">
+
+        </div>
+    </section>
+    <footer>
+        <p>&COPY; Rafael de Figueiredo Alves</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
