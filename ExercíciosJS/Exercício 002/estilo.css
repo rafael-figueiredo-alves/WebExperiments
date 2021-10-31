@@ -27,4 +27,26 @@ footer {
 input {
     border: none;
     border-width: 0pt;
+    text-align: center;
+    font: normal 14pt Arial;     
+}
+
+label {
+    text-align: center;
+    font: normal 14pt Arial;    
+}
+
+button {
+    text-align: center;
+    font: normal 14pt Arial;     
+}
+
+.botao {
+    text-align: center;
+    font: normal 14pt Arial;    
+}
+
+.Resultado {
+    text-align: center;
+    font: normal 14pt Arial;     
 }
