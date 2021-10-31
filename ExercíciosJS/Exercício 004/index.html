@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem | versão 0.1</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Contagem | versão 0.1</h1>
+    </header>    
+    <section>
+        <div>
+            <p>
+             <label for="ed_inicio">Informe o inicío da contagem:</label>
+             <input type="number" name="ed_inicio" id="ed_inicio">
+            </p>
+            <p>
+             <label for="ed_fim">Informe o término da contagem:</label>
+             <input type="number" name="ed_fim" id="ed_fim">
+            </p>
+            <p> 
+             <label for="ed_padrao">Informe o padrão de contagem:</label>
+             <input type="number" name="ed_padrao" id="ed_padrao">
+            </p>
+            <p> 
+             <button onclick="iniciarContagem()">Iniciar a contagem</button>
+            </p> 
+        </div>
+        <div>
+            <p class="msg"><strong>Aguardando as informações para iniciar a contagem</strong></p>
+            <br>
+            <p class="Resultado"></p>
+        </div>
+    </section>
+    <footer>
+        <p>&COPY; Rafael de Figueiredo Alves</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
