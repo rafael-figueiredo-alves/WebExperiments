@@ -6,7 +6,12 @@ body {
 .bt-primary {
     color: whitesmoke;
     background-color: tomato;
-    border-radius: 25%;
+    border-radius: 35%;
+    border: none;
     height: 50px;
-    width: 200px;
+    width: 75px;
+}
+
+.teste {
+    min-height: 100vh;
 }
