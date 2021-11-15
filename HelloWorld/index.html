@@ -17,14 +17,37 @@
     <div id="root">
 
     </div>
+    <div id="teste"></div>
 
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
     <script type="text/babel">
+
+        class App extends React.Component{
+            constructor(){
+                super()
+                this.state = {
+                    nome: 'Rafaela Alves'
+                }
+            }
+            Alterar = () => {
+                  this.setState({nome: 'Davi Alves'})  
+            }
+            render(){
+                return (
+                    <div>
+                    <h2>Hi, {this.state.nome}!</h2>
+                    <button onClick={this.Alterar}>Alterar</button>
+                    </div>
+                )
+            }
+        }
+
         let nome = "Rafael Alves"
         ReactDOM.render(<h1>Hello, {nome}</h1>, document.getElementById('root'))
+        ReactDOM.render(<App />, document.querySelector('#teste'))
     </script>
 </body>
 </html>
