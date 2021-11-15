@@ -26,8 +26,8 @@
     <script type="text/babel">
 
         class App extends React.Component{
-            constructor(){
-                super()
+            constructor(props){
+                super(props)
                 this.state = {
                     nome: 'Rafaela Alves',
                     apelido: ''
@@ -48,14 +48,15 @@
                     <br />
                     <input type="text" value={this.state.apelido} onChange={this.Apelidar} />
                     <p>O apelido é: {this.state.apelido}</p>
+                    <p>A propriedade é: {this.props.texto}</p>
                     </div>
                 )
             }
         }
 
-        let nome = "Rafael Alves"
-        ReactDOM.render(<h1>Hello, {nome}</h1>, document.getElementById('root'))
-        ReactDOM.render(<App />, document.querySelector('#teste'))
+        let nome = "Rafael Alves";
+        ReactDOM.render(<h1>Hello, {nome}</h1>, document.getElementById('root'));
+        ReactDOM.render(<App texto="Hello" />, document.querySelector('#teste'));
     </script>
 </body>
 </html>
